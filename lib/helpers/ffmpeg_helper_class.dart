@@ -147,7 +147,7 @@ class FFMpegHelper {
     return FFMpegHelperSession(
       nonWindowSession: sess,
       cancelSession: () async {
-        await sess.cancel();
+        sess.cancel();
       },
     );
   }
@@ -198,7 +198,7 @@ class FFMpegHelper {
             double.tryParse(temp['fps']) ?? 0.0,
             double.tryParse(temp['stream_0_0_q']) ?? 0.0,
             int.tryParse(temp['total_size']) ?? 0,
-            double.parse(
+            int.parse(
                 temp['out_time_us'].toString()), // 2189.6kbits/s => 2189.6
             double.tryParse(
                     temp['bitrate']?.replaceAll(RegExp('[a-z/]'), '')) ??
