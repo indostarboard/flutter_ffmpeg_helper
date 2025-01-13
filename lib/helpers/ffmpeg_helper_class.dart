@@ -198,8 +198,11 @@ class FFMpegHelper {
             double.tryParse(temp['fps']) ?? 0.0,
             double.tryParse(temp['stream_0_0_q']) ?? 0.0,
             int.tryParse(temp['total_size']) ?? 0,
-            int.parse(
-                temp['out_time_us'].toString()), // 2189.6kbits/s => 2189.6
+            // int.parse(
+            //   temp['out_time_us'].toString(),
+            double.parse(
+              temp['out_time_us'].toString(),
+            ), // 2189.6kbits/s => 2189.6
             double.tryParse(
                     temp['bitrate']?.replaceAll(RegExp('[a-z/]'), '')) ??
                 0.0,
