@@ -18,7 +18,7 @@ dependencies:
   ffmpeg_kit_flutter_min_gpl:
     git:
       url: https://github.com/indostarboard/ffmpeg_kit_flutter_min_gpl
-      ref: main
+      ref: dev
   package_info_plus: ^8.1.2
 
 dev_dependencies:
